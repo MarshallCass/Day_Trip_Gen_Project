@@ -12,7 +12,7 @@ let randomDestination = destination[Math.floor(Math.random()*destination.length)
 
 
 let acceptedDestination = prompt('Destination is:' + ' '+ randomDestination + ' ' + 'Are you pleased with this selection? yes or no ');
-    if(acceptedDestination == 'no'){
+    if(acceptedDestination === 'no' || acceptedDestination === 'n' || acceptedDestination === 'NO' || acceptedDestination === 'No' ){
         return destinationSelection();
     }
         else{
@@ -20,10 +20,9 @@ let acceptedDestination = prompt('Destination is:' + ' '+ randomDestination + ' 
         console.log('Your destination will be:' + " " + randomDestination);
         return randomDestination;
         }
+
 }
-destinationSelection();
-
-
+    destinationSelection();
 
 
 function transportationSelection(){
@@ -34,7 +33,7 @@ let randomTransportation = transportation[Math.floor(Math.random()*transportatio
  
     
 let acceptedTransportation = prompt('Transportation is:' + ' '+ randomTransportation + ' ' + 'Are you pleased with this selection?');
-    if(acceptedTransportation === 'no'){
+    if(acceptedTransportation === 'no' || acceptedTransportation === 'n' || acceptedTransportation === 'NO' || acceptedTransportation === 'No'){
         return transportationSelection();
     }
         else{
@@ -55,7 +54,7 @@ let randomDining = dining[Math.floor(Math.random()*dining.length)];
 
 
 let acceptedDining = prompt('Dinner will be at:' + ' '+ randomDining + ' ' + 'Are you pleased with this selection?');
-    if(acceptedDining === 'no'){
+    if(acceptedDining === 'no' || acceptedDining === 'n' || acceptedDining === 'NO' || acceptedDining === 'No'){
         return diningSelection();
     }
         else{
@@ -75,7 +74,7 @@ let entertainment = ['Sightseeing','Mini Golf','Skiing','Concert','Museum','Base
 let randomEntertainment = entertainment[Math.floor(Math.random()*entertainment.length)];
 
 let acceptedEntertainment = prompt('Entertainment is is:' + ' '+ randomEntertainment + ' ' + 'Are you pleased with this selection?');
-    if(acceptedEntertainment === 'no'){
+    if(acceptedEntertainment === 'no' || acceptedEntertainment === 'n' || acceptedEntertainment === 'NO' || acceptedEntertainment === 'No'){
         return entertainmentSelection();
     }
         else{
@@ -89,13 +88,13 @@ entertainmentSelection();
 
 function selectionConfirm(){
 
-let selectionConfirmation = prompt("Would you like to confirm the selections that have been chosen?")
-    if(selectionConfirmation === 'no'){
-       return console.clear();
+let selectionConfirmation = prompt("Would you like to complete the selections that have been chosen or Start Over?")
+    if(selectionConfirmation === 'no' || acceptedConfirmation === "n" || acceptedConfirmation === 'NO' || acceptedConfirmation === 'No'){
+       console.log(location.reload());
        
     }
-    else{
-        console.log("Your trip selections have been confirmed and complete");
+    else {
+        console.log("Your trip selections have been confirmed and are complete");
     }
 }
 selectionConfirm();
