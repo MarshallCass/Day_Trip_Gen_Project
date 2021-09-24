@@ -88,8 +88,8 @@ entertainmentSelection();
 
 function selectionConfirm(){
 
-let selectionConfirmation = prompt("Would you like to complete the selections that have been chosen or Start Over?")
-    if(selectionConfirmation === 'no' || acceptedConfirmation === "n" || acceptedConfirmation === 'NO' || acceptedConfirmation === 'No'){
+let selectionConfirmation = prompt("Would you like to complete the selections that have been chosen?")
+    if(selectionConfirmation === 'no' || selectionConfirmation === "n" || selectionConfirmation === 'NO' || selectionConfirmation === 'No'){
        console.log(location.reload());
        
     }
